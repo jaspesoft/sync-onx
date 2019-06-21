@@ -49,11 +49,11 @@ export class BlockchainServices {
         if (block.confirmations > 0) {
             confirmation = true;
         }
-        if (checkExist) {
-            const existe = await BlockchainModel.findOne({symbol: crypto,  nro_block: block.height}).lean(false).exec();
-            if (existe !== null) {
-                return false;
-            }
+        
+        const existe = await BlockchainModel.findOne({symbol: crypto,  nro_block: block.height}).lean(false).exec();
+        console.log(existe);
+        if (existe !== null) {
+            return false;
         }
         
 
