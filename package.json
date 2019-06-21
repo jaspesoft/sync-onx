@@ -1,0 +1,40 @@
+{
+  "name": "sync-onx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon",
+    "start": "nodemon ./dist/main.js",
+    "prod": "npm run build && npm run start",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [
+    "Blockchain",
+    "socket",
+    "crypto",
+    "currency"
+  ],
+  "author": "Angel Bejarano",
+  "license": "ISC",
+  "dependencies": {
+    "bitcoin-rpc-promise": "^2.1.6",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "joigoose": "^4.0.8",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.6.0",
+    "node-cron": "^2.0.3",
+    "p-iteration": "^1.1.8"
+  },
+  "devDependencies": {
+    "@types/joigoose": "^2.0.1",
+    "@types/node": "^12.0.8",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
+  }
+}
