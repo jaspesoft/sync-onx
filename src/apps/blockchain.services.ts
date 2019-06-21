@@ -39,7 +39,7 @@ export class BlockchainServices {
         
     }
     private async updateTotalBlocks(coinID: string, totalBlock: number) {
-        await CoinsModel.findOneAndUpdate(
+        await CoinsModel.findAndModify(
             {_id: coinID },
             {total_blocks: totalBlock},
         );
